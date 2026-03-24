@@ -1,3 +1,7 @@
+Libarary database project from CS102. This built upon previous projects and with each new
+version, it implemented different data structures and algorithms. This is the final version
+of the project that required a user interface.
+
 Project requirements:
 - Database should implement a dynamic binary search tree of dynamic linked lists to organize
   the info within the database
