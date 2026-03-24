@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="757.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainControl"> <!-- fx:controller="MainControl.java"> fx:controller="mainControl.java">-->
+   <children>
+      <RadioButton layoutX="150.0" layoutY="140.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="123.0" text="Print Patrons">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="150.0" layoutY="200.0" mnemonicParsing="false" text="Add a Patron" toggleGroup="$toggle" />
+      <RadioButton layoutX="150.0" layoutY="170.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="123.0" text="Search Patron" toggleGroup="$toggle" />
+      <RadioButton layoutX="150.0" layoutY="230.0" mnemonicParsing="false" text="Add a Checkout" toggleGroup="$toggle" />
+      <RadioButton layoutX="150.0" layoutY="260.0" mnemonicParsing="false" text="Export to File" toggleGroup="$toggle" />
+      <RadioButton layoutX="150.0" layoutY="290.0" mnemonicParsing="false" text="Load from File" toggleGroup="$toggle" />
+      <Button fx:id="execute" layoutX="181.0" layoutY="325.0" mnemonicParsing="false" onAction="#mainMenu" text="Execute" />
+      <Text fx:id="welcomeDate" layoutX="434.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="97.0" />
+      <Text layoutX="313.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the CS-102 Library Database Program" wrappingWidth="339.6708984375" />
+      <Rectangle fx:id="hideMenu" arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="757.0" layoutX="-1.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="966.0" />
+      <TextArea fx:id="patronDatabase" editable="false" layoutX="437.0" layoutY="108.0" prefHeight="550.0" prefWidth="460.0" text="Select an option to the left and click &quot;Execute&quot;. The program will then allow you to submit the associated data to complete the action." wrapText="true" />
+      <TextField fx:id="searchPatronLN" layoutX="118.0" layoutY="435.0" promptText="Enter last name to search" />
+      <Button fx:id="searchBtn" layoutX="326.0" layoutY="435.0" mnemonicParsing="false" onAction="#search" text="Search" visible="false" />
+      <TextField fx:id="textFN" layoutX="106.0" layoutY="488.0" prefHeight="31.0" prefWidth="106.0" promptText="First Name" />
+      <TextField fx:id="textLN" layoutX="219.0" layoutY="488.0" prefHeight="31.0" prefWidth="106.0" promptText="Last Name" />
+      <Button fx:id="add" layoutX="343.0" layoutY="488.0" mnemonicParsing="false" onAction="#addPatron" prefHeight="31.0" prefWidth="55.0" text="Add" visible="false" />
+      <TextField fx:id="textCLN" layoutX="27.0" layoutY="547.0" prefHeight="31.0" prefWidth="123.0" promptText="Patron LN" />
+      <TextField fx:id="textISBN" layoutX="159.0" layoutY="547.0" prefHeight="31.0" prefWidth="170.0" promptText="ISBN" />
+      <DatePicker fx:id="textDate" layoutX="27.0" layoutY="584.0" prefHeight="31.0" prefWidth="223.0" promptText="Choose checkout date" />
+      <Button fx:id="cAdd" layoutX="347.0" layoutY="547.0" mnemonicParsing="false" onAction="#checkoutAdd" text="Add" visible="false" />
+   </children>
+</AnchorPane>
